@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>933</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>超声报告自动生成系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>933</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_open_file"/>
+    <addaction name="action_close_file"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_segmentation"/>
+   <addaction name="action_roi_size"/>
+   <addaction name="action_edge"/>
+   <addaction name="action_nodule_inner_mass"/>
+   <addaction name="action_nodule_calcification"/>
+   <addaction name="action_thyroid_calcification"/>
+   <addaction name="action_position"/>
+   <addaction name="action_nodule_shape"/>
+   <addaction name="action_halo"/>
+   <addaction name="action_inner_mass_classification"/>
+   <addaction name="action_calcification_classification"/>
+   <addaction name="separator"/>
+   <addaction name="action_export_report"/>
+  </widget>
+  <action name="action_open_file">
+   <property name="text">
+    <string>打开文件...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_close_file">
+   <property name="text">
+    <string>关闭文件...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="action_segmentation">
+   <property name="text">
+    <string>前景分割</string>
+   </property>
+   <property name="toolTip">
+    <string>前景分割</string>
+   </property>
+  </action>
+  <action name="action_roi_size">
+   <property name="text">
+    <string>ROI大小信息</string>
+   </property>
+   <property name="toolTip">
+    <string>ROI大小信息</string>
+   </property>
+  </action>
+  <action name="action_edge">
+   <property name="text">
+    <string>边缘检测</string>
+   </property>
+   <property name="toolTip">
+    <string>边缘检测</string>
+   </property>
+  </action>
+  <action name="action_nodule_inner_mass">
+   <property name="text">
+    <string>结节內质特性</string>
+   </property>
+   <property name="toolTip">
+    <string>结节內质特性</string>
+   </property>
+  </action>
+  <action name="action_nodule_calcification">
+   <property name="text">
+    <string>结节结晶钙化</string>
+   </property>
+   <property name="toolTip">
+    <string>结节结晶钙化</string>
+   </property>
+  </action>
+  <action name="action_thyroid_calcification">
+   <property name="text">
+    <string>甲状腺钙化</string>
+   </property>
+   <property name="toolTip">
+    <string>甲状腺钙化</string>
+   </property>
+  </action>
+  <action name="action_position">
+   <property name="text">
+    <string>取材位置信息</string>
+   </property>
+   <property name="toolTip">
+    <string>取材位置信息</string>
+   </property>
+  </action>
+  <action name="action_nodule_shape">
+   <property name="text">
+    <string>结节形状特征</string>
+   </property>
+   <property name="toolTip">
+    <string>结节形状特征</string>
+   </property>
+  </action>
+  <action name="action_halo">
+   <property name="text">
+    <string>结节声晕厚度</string>
+   </property>
+   <property name="toolTip">
+    <string>结节声晕厚度</string>
+   </property>
+  </action>
+  <action name="action_inner_mass_classification">
+   <property name="text">
+    <string>结节内质分类</string>
+   </property>
+   <property name="toolTip">
+    <string>结节内质分类</string>
+   </property>
+  </action>
+  <action name="action_calcification_classification">
+   <property name="text">
+    <string>结节钙化分类</string>
+   </property>
+   <property name="toolTip">
+    <string>结节钙化分类</string>
+   </property>
+  </action>
+  <action name="action_export_report">
+   <property name="text">
+    <string>导出报告</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
